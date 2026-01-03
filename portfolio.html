@@ -1,0 +1,270 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Yadav | Portfolio</title>
+  <meta name="description" content="Prince Yadav | TYBSc IT Student | Web Developer | Java, ML, IoT Projects" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+    body { background: #0f172a; color: #e5e7eb; line-height: 1.6; }
+    a { color: #38bdf8; text-decoration: none; }
+    header { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; }
+    header h1 { font-size: 3rem; font-weight: 700; }
+    header h1 span { color: #38bdf8; }
+    header p { max-width: 600px; margin: 20px auto; color: #cbd5f5; }
+    .btn { display: inline-block; margin: 10px; padding: 12px 28px; border-radius: 30px; background: #38bdf8; color: #020617; font-weight: 600; transition: 0.3s; }
+    .btn:hover { background: #0ea5e9; }
+    section { padding: 80px 10%; }
+    section h2 { font-size: 2.2rem; margin-bottom: 40px; text-align: center; }
+    .about p { max-width: 900px; margin: auto; text-align: center; color: #cbd5f5; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .skill { background: #020617; padding: 20px; border-radius: 15px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .project { background: #020617; padding: 25px; border-radius: 18px; box-shadow: 0 10px 25px rgba(0,0,0,0.35); }
+    .project h3 { margin-bottom: 10px; color: #38bdf8; }
+    footer { background: #020617; padding: 30px; text-align: center; }
+    footer p { color: #94a3b8; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 2.2rem; }
+      section { padding: 60px 6%; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav style="position:fixed;top:0;left:0;width:100%;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;background:#020617;z-index:1000">
+      <h3>Prince Yadav</h3>
+      <div id="menu" style="display:none;flex-direction:column;gap:15px">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div style="display:flex;gap:15px;align-items:center">
+        <button id="themeToggle">🌙</button>
+        <button onclick="toggleMenu()" style="font-size:24px">☰</button>
+      </div>
+    </nav>
+    <div style="margin-top:120px;text-align:center">
+      <img src="photo.jpg" alt="Prince Yadav" style="width:160px;height:160px;border-radius:50%;border:4px solid #38bdf8" />
+      <h1>Hi, I'm <span>Prince Yadav</span></h1>
+      <p>TYBSc IT student at Bhavan's College. Passionate about Web Development, Java & Machine Learning.</p>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="resume.pdf" class="btn">Download Resume</a>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a TYBSc IT student from Bhavan's College. I enjoy learning modern web technologies, Java & Spring, Machine Learning concepts and building academic as well as practical projects. My goal is to become a skilled software developer and work on impactful tech solutions.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML, CSS, JavaScript</div>
+      <div class="skill">Java, JDBC, Servlets</div>
+      <div class="skill">Enterprise Java & Spring</div>
+      <div class="skill">Machine Learning (Basics)</div>
+      <div class="skill">IoT Fundamentals</div>
+      <div class="skill">Flutter (Beginner)</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project">
+        <h3>Campus Navigation System</h3>
+        <p>Web‑based project to help students navigate college campus efficiently using interactive maps and directions.</p>
+      </div>
+      <div class="project">
+        <h3>To‑Do App (Flutter)</h3>
+        <p>Simple and clean to‑do application built using Flutter with task management features.</p>
+      </div>
+      <div class="project">
+        <h3>IoT in Data Centers</h3>
+        <p>Academic project explaining the role of IoT in monitoring, automation and efficiency of data centers.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form style="max-width:600px;margin:auto;background:#020617;padding:30px;border-radius:20px" onsubmit="sendMessage(event)">
+      <input type="text" placeholder="Your Name" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:none" />
+      <input type="email" placeholder="Your Email" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:none" />
+      <textarea placeholder="Your Message" required style="width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:none;height:120px"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+    <div style="margin-top:40px;text-align:center">
+      <a href="https://github.com/" target="_blank">GitHub</a> | 
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a> | 
+      <a href="https://instagram.com/" target="_blank">Instagram</a> | 
+      <a href="https://youtube.com/" target="_blank">YouTube</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Prince Yadav | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('themeToggle');
+    let dark = true;
+    btn.onclick = () => {
+      document.body.classList.toggle('light');
+      btn.innerText = dark ? '☀️' : '🌙';
+      dark = !dark;
+    };
+
+    function toggleMenu(){
+      const menu = document.getElementById('menu');
+      menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+    }
+
+    function sendMessage(e){
+      e.preventDefault();
+      alert('Thank you! Your message has been sent successfully.');
+    }
+  </script>
+</body>
+</html> -->
+
+.....................
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prince Yadav | Portfolio</title>
+  <meta name="description" content="Prince Yadav | TYBSc IT Student | Web Developer | Java, ML, IoT Projects" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:#0f172a;color:#e5e7eb;line-height:1.6}
+    a{text-decoration:none;color:#f97316;font-weight:500}
+
+    /* NAVBAR */
+    nav{position:fixed;top:0;left:0;width:100%;background:#020617;display:flex;justify-content:space-between;align-items:center;padding:15px 30px;z-index:1000}
+    nav h3{color:#f97316;font-weight:700}
+
+    /* MENU */
+    #navToggle{display:none}
+    .menu-btn{font-size:26px;cursor:pointer;color:#fff}
+    .side-menu{
+      position:fixed;top:0;right:0;height:100vh;width:260px;background:#fff;
+      display:flex;flex-direction:column;gap:25px;padding:80px 30px;
+      transform:translateX(100%);transition:.3s;z-index:2000
+    }
+    #navToggle:checked ~ .side-menu{transform:translateX(0)}
+    .close-btn{align-self:flex-end;font-size:28px;cursor:pointer;color:#020617}
+    .side-menu a{font-size:18px;color:#020617}
+
+    header{min-height:100vh;display:flex;justify-content:center;align-items:center;text-align:center;padding-top:120px}
+    header img{width:160px;height:160px;border-radius:50%;border:5px solid #f97316;margin-bottom:20px}
+    header h1{font-size:3rem}
+    header h1 span{color:#f97316}
+    header p{max-width:600px;margin:20px auto;color:#cbd5f5}
+
+    .btn{display:inline-block;margin:10px;padding:12px 28px;border-radius:30px;background:#f97316;color:#fff;font-weight:600}
+    .btn:hover{background:#ea580c}
+
+    section{padding:80px 10%}
+    section h2{text-align:center;font-size:2.2rem;margin-bottom:40px}
+
+    .skills-grid,.projects-grid{display:grid;gap:20px}
+    .skills-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .projects-grid{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+
+    .skill,.project{background:#020617;padding:20px;border-radius:15px;text-align:center}
+    .project h3{color:#f97316;margin-bottom:10px}
+
+    #contact form{max-width:600px;margin:auto;background:#fff;padding:30px;border-radius:20px}
+    #contact input,#contact textarea{width:100%;padding:12px;margin-bottom:15px;border-radius:10px;border:none}
+
+    footer{text-align:center;padding:30px;background:#020617}
+    footer p{color:#94a3b8}
+
+    @media(max-width:600px){header h1{font-size:2.2rem}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <h3>Prince Yadav</h3>
+  <input type="checkbox" id="navToggle">
+  <label for="navToggle" class="menu-btn">☰</label>
+
+  <div class="side-menu">
+    <label for="navToggle" class="close-btn">✕</label>
+    <a href="#about">👤 About</a>
+    <a href="#skills">🛠 Skills</a>
+    <a href="#projects">📁 Projects</a>
+    <a href="#contact">📞 Contact</a>
+  </div>
+</nav>
+
+<header>
+  <div>
+    <img src="photo.jpg" alt="Prince Yadav">
+    <h1>Hi, I'm <span>Prince Yadav</span></h1>
+    <p>TYBSc IT student at Bhavan's College. Passionate about Web Development, Java & Machine Learning.</p>
+    <a href="#projects" class="btn">View Projects</a>
+    <a href="resume.pdf" class="btn">Download Resume</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p style="text-align:center;max-width:900px;margin:auto">
+    TYBSc IT student from Bhavan's College (Batch D999). Interested in Web Development, Java, Spring, Machine Learning and real‑world projects.
+  </p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill">HTML, CSS, JavaScript</div>
+    <div class="skill">Java, JDBC, Servlets</div>
+    <div class="skill">Enterprise Java & Spring</div>
+    <div class="skill">Machine Learning (Basics)</div>
+    <div class="skill">IoT Fundamentals</div>
+    <div class="skill">Flutter (Beginner)</div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    <div class="project"><h3>Campus Navigation System</h3><p>Interactive campus map project.</p></div>
+    <div class="project"><h3>To‑Do App (Flutter)</h3><p>Task management mobile app.</p></div>
+    <div class="project"><h3>IoT in Data Centers</h3><p>Monitoring & automation using IoT.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Me</h2>
+  <form onsubmit="event.preventDefault();alert('Message sent successfully!')">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 Prince Yadav | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
